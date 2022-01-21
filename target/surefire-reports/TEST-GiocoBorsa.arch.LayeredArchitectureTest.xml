@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GiocoBorsa.arch.LayeredArchitectureTest" time="1.138" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.1+1"/>
+    <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/17.0.1_1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/robertoscarpati/desktop/GiocoBorsa"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="user.country" value="IT"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/robertoscarpati/Desktop/GiocoBorsa"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="17.0.1+1"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/2v/6t40zkvd7xz4kc8dq48m2wx80000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.8.4/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/robertoscarpati/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/usr/local/Cellar/maven/3.8.4/libexec/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="11.6"/>
+    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.8.4/libexec/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/robertoscarpati"/>
+    <property name="user.timezone" value="Europe/Rome"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="robertoscarpati"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.8.4/libexec/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.home" value="/usr/local/Cellar/openjdk/17.0.1_1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="user.language" value="it"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.1"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.8.4/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="layer_dependencies_are_respected" classname="GiocoBorsa.arch.LayeredArchitectureTest" time="1.138">
+    <failure message="Architecture Violation [Priority: MEDIUM] - Rule &apos;Layered architecture consisting of&#10;layer &apos;Boundaries&apos; (&apos;GiocoBorsa.GUI..&apos;)&#10;layer &apos;Controls&apos; (&apos;GiocoBorsa.Controller..&apos;)&#10;layer &apos;Entities&apos; (&apos;GiocoBorsa.Model..&apos;)&#10;layer &apos;Database&apos; (&apos;GiocoBorsa.ImplementazioniPostgresDAO..&apos;)&#10;where layer &apos;Boundaries&apos; may not be accessed by any layer&#10;where layer &apos;Controls&apos; may only be accessed by layers [&apos;Boundaries&apos;]&#10;where layer &apos;Entities&apos; may only be accessed by layers [&apos;Controls&apos;]&#10;where layer &apos;Database&apos; may only be accessed by layers [&apos;Entities&apos;]&apos; was violated (33 times):&#10;Constructor &lt;GiocoBorsa.GUI.ListaAcquisti.&lt;init&gt;(GiocoBorsa.Controller.Controller, javax.swing.JFrame)&gt; calls method &lt;GiocoBorsa.Model.Acquisto.getPrezzoAcquisto()&gt; in (ListaAcquisti.java:76)&#10;Constructor &lt;GiocoBorsa.GUI.ListaAcquisti.&lt;init&gt;(GiocoBorsa.Controller.Controller, javax.swing.JFrame)&gt; calls method &lt;GiocoBorsa.Model.Acquisto.getQuantita()&gt; in (ListaAcquisti.java:76)&#10;Constructor &lt;GiocoBorsa.GUI.ListaAcquisti.&lt;init&gt;(GiocoBorsa.Controller.Controller, javax.swing.JFrame)&gt; calls method &lt;GiocoBorsa.Model.Acquisto.getSocieta()&gt; in (ListaAcquisti.java:76)&#10;Constructor &lt;GiocoBorsa.GUI.ListaAcquisti.&lt;init&gt;(GiocoBorsa.Controller.Controller, javax.swing.JFrame)&gt; calls method &lt;GiocoBorsa.Model.Societa.getNome()&gt; in (ListaAcquisti.java:76)&#10;Constructor &lt;GiocoBorsa.GUI.ListaAcquisti.&lt;init&gt;(GiocoBorsa.Controller.Controller, javax.swing.JFrame)&gt; calls method &lt;GiocoBorsa.Model.Societa.getPrezzoAzione()&gt; in (ListaAcquisti.java:76)&#10;Method &lt;GiocoBorsa.Controller.Controller.acquista(java.lang.String, int)&gt; calls constructor &lt;GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.&lt;init&gt;()&gt; in (Controller.java:168)&#10;Method &lt;GiocoBorsa.Controller.Controller.nuovaBorsa(java.lang.String)&gt; calls constructor &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.&lt;init&gt;()&gt; in (Controller.java:42)&#10;Method &lt;GiocoBorsa.Controller.Controller.nuovaSocieta(java.lang.String, java.lang.String)&gt; calls constructor &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.&lt;init&gt;()&gt; in (Controller.java:77)&#10;Method &lt;GiocoBorsa.Controller.Controller.setPrezzoAzione(java.lang.String, float)&gt; calls constructor &lt;GiocoBorsa.ImplementazioniPostgresDAO.SocietaImplementazionePostgresDAO.&lt;init&gt;()&gt; in (Controller.java:133)&#10;Method &lt;GiocoBorsa.DAO.GiocatoreDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)&gt; has parameter of type &lt;GiocoBorsa.Model.Giocatore&gt; in (GiocatoreDAO.java:0)&#10;Method &lt;GiocoBorsa.DAO.GiocatoreDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)&gt; has parameter of type &lt;GiocoBorsa.Model.Societa&gt; in (GiocatoreDAO.java:0)&#10;Method &lt;GiocoBorsa.DAO.ListinoDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)&gt; has parameter of type &lt;GiocoBorsa.Model.Borsa&gt; in (ListinoDAO.java:0)&#10;Method &lt;GiocoBorsa.DAO.ListinoDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)&gt; has parameter of type &lt;GiocoBorsa.Model.Societa&gt; in (ListinoDAO.java:0)&#10;Method &lt;GiocoBorsa.DAO.ListinoDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)&gt; has parameter of type &lt;GiocoBorsa.Model.Borsa&gt; in (ListinoDAO.java:0)&#10;Method &lt;GiocoBorsa.DAO.ListinoDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)&gt; has return type &lt;GiocoBorsa.Model.Listino&gt; in (ListinoDAO.java:0)&#10;Method &lt;GiocoBorsa.DAO.SocietaDAO.updatePrezzo(GiocoBorsa.Model.Societa, float)&gt; has parameter of type &lt;GiocoBorsa.Model.Societa&gt; in (SocietaDAO.java:0)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)&gt; calls method &lt;GiocoBorsa.Model.Giocatore.getNome()&gt; in (GiocatoreImplementazionePostgresDAO.java:32)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)&gt; calls method &lt;GiocoBorsa.Model.Societa.getNome()&gt; in (GiocatoreImplementazionePostgresDAO.java:32)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)&gt; has parameter of type &lt;GiocoBorsa.Model.Giocatore&gt; in (GiocatoreImplementazionePostgresDAO.java:0)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)&gt; has parameter of type &lt;GiocoBorsa.Model.Societa&gt; in (GiocatoreImplementazionePostgresDAO.java:0)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)&gt; calls method &lt;GiocoBorsa.Model.Borsa.getCitta()&gt; in (ListinoImplementazionePostgresDAO.java:57)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)&gt; calls method &lt;GiocoBorsa.Model.Societa.getNome()&gt; in (ListinoImplementazionePostgresDAO.java:57)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)&gt; calls method &lt;GiocoBorsa.Model.Societa.getPrezzoAzione()&gt; in (ListinoImplementazionePostgresDAO.java:57)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)&gt; has parameter of type &lt;GiocoBorsa.Model.Borsa&gt; in (ListinoImplementazionePostgresDAO.java:0)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)&gt; has parameter of type &lt;GiocoBorsa.Model.Societa&gt; in (ListinoImplementazionePostgresDAO.java:0)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)&gt; calls constructor &lt;GiocoBorsa.Model.Listino.&lt;init&gt;()&gt; in (ListinoImplementazionePostgresDAO.java:31)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)&gt; calls constructor &lt;GiocoBorsa.Model.Societa.&lt;init&gt;(java.lang.String, float)&gt; in (ListinoImplementazionePostgresDAO.java:37)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)&gt; calls method &lt;GiocoBorsa.Model.Borsa.getCitta()&gt; in (ListinoImplementazionePostgresDAO.java:34)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)&gt; calls method &lt;GiocoBorsa.Model.Listino.addSocieta(GiocoBorsa.Model.Societa)&gt; in (ListinoImplementazionePostgresDAO.java:38)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)&gt; has parameter of type &lt;GiocoBorsa.Model.Borsa&gt; in (ListinoImplementazionePostgresDAO.java:0)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)&gt; has return type &lt;GiocoBorsa.Model.Listino&gt; in (ListinoImplementazionePostgresDAO.java:0)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.SocietaImplementazionePostgresDAO.updatePrezzo(GiocoBorsa.Model.Societa, float)&gt; calls method &lt;GiocoBorsa.Model.Societa.getNome()&gt; in (SocietaImplementazionePostgresDAO.java:30)&#10;Method &lt;GiocoBorsa.ImplementazioniPostgresDAO.SocietaImplementazionePostgresDAO.updatePrezzo(GiocoBorsa.Model.Societa, float)&gt; has parameter of type &lt;GiocoBorsa.Model.Societa&gt; in (SocietaImplementazionePostgresDAO.java:0)" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] - Rule 'Layered architecture consisting of
+layer 'Boundaries' ('GiocoBorsa.GUI..')
+layer 'Controls' ('GiocoBorsa.Controller..')
+layer 'Entities' ('GiocoBorsa.Model..')
+layer 'Database' ('GiocoBorsa.ImplementazioniPostgresDAO..')
+where layer 'Boundaries' may not be accessed by any layer
+where layer 'Controls' may only be accessed by layers ['Boundaries']
+where layer 'Entities' may only be accessed by layers ['Controls']
+where layer 'Database' may only be accessed by layers ['Entities']' was violated (33 times):
+Constructor <GiocoBorsa.GUI.ListaAcquisti.<init>(GiocoBorsa.Controller.Controller, javax.swing.JFrame)> calls method <GiocoBorsa.Model.Acquisto.getPrezzoAcquisto()> in (ListaAcquisti.java:76)
+Constructor <GiocoBorsa.GUI.ListaAcquisti.<init>(GiocoBorsa.Controller.Controller, javax.swing.JFrame)> calls method <GiocoBorsa.Model.Acquisto.getQuantita()> in (ListaAcquisti.java:76)
+Constructor <GiocoBorsa.GUI.ListaAcquisti.<init>(GiocoBorsa.Controller.Controller, javax.swing.JFrame)> calls method <GiocoBorsa.Model.Acquisto.getSocieta()> in (ListaAcquisti.java:76)
+Constructor <GiocoBorsa.GUI.ListaAcquisti.<init>(GiocoBorsa.Controller.Controller, javax.swing.JFrame)> calls method <GiocoBorsa.Model.Societa.getNome()> in (ListaAcquisti.java:76)
+Constructor <GiocoBorsa.GUI.ListaAcquisti.<init>(GiocoBorsa.Controller.Controller, javax.swing.JFrame)> calls method <GiocoBorsa.Model.Societa.getPrezzoAzione()> in (ListaAcquisti.java:76)
+Method <GiocoBorsa.Controller.Controller.acquista(java.lang.String, int)> calls constructor <GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.<init>()> in (Controller.java:168)
+Method <GiocoBorsa.Controller.Controller.nuovaBorsa(java.lang.String)> calls constructor <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.<init>()> in (Controller.java:42)
+Method <GiocoBorsa.Controller.Controller.nuovaSocieta(java.lang.String, java.lang.String)> calls constructor <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.<init>()> in (Controller.java:77)
+Method <GiocoBorsa.Controller.Controller.setPrezzoAzione(java.lang.String, float)> calls constructor <GiocoBorsa.ImplementazioniPostgresDAO.SocietaImplementazionePostgresDAO.<init>()> in (Controller.java:133)
+Method <GiocoBorsa.DAO.GiocatoreDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)> has parameter of type <GiocoBorsa.Model.Giocatore> in (GiocatoreDAO.java:0)
+Method <GiocoBorsa.DAO.GiocatoreDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)> has parameter of type <GiocoBorsa.Model.Societa> in (GiocatoreDAO.java:0)
+Method <GiocoBorsa.DAO.ListinoDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)> has parameter of type <GiocoBorsa.Model.Borsa> in (ListinoDAO.java:0)
+Method <GiocoBorsa.DAO.ListinoDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)> has parameter of type <GiocoBorsa.Model.Societa> in (ListinoDAO.java:0)
+Method <GiocoBorsa.DAO.ListinoDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)> has parameter of type <GiocoBorsa.Model.Borsa> in (ListinoDAO.java:0)
+Method <GiocoBorsa.DAO.ListinoDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)> has return type <GiocoBorsa.Model.Listino> in (ListinoDAO.java:0)
+Method <GiocoBorsa.DAO.SocietaDAO.updatePrezzo(GiocoBorsa.Model.Societa, float)> has parameter of type <GiocoBorsa.Model.Societa> in (SocietaDAO.java:0)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)> calls method <GiocoBorsa.Model.Giocatore.getNome()> in (GiocatoreImplementazionePostgresDAO.java:32)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)> calls method <GiocoBorsa.Model.Societa.getNome()> in (GiocatoreImplementazionePostgresDAO.java:32)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)> has parameter of type <GiocoBorsa.Model.Giocatore> in (GiocatoreImplementazionePostgresDAO.java:0)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.GiocatoreImplementazionePostgresDAO.acquistaDB(GiocoBorsa.Model.Giocatore, int, java.time.LocalDate, float, GiocoBorsa.Model.Societa)> has parameter of type <GiocoBorsa.Model.Societa> in (GiocatoreImplementazionePostgresDAO.java:0)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)> calls method <GiocoBorsa.Model.Borsa.getCitta()> in (ListinoImplementazionePostgresDAO.java:57)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)> calls method <GiocoBorsa.Model.Societa.getNome()> in (ListinoImplementazionePostgresDAO.java:57)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)> calls method <GiocoBorsa.Model.Societa.getPrezzoAzione()> in (ListinoImplementazionePostgresDAO.java:57)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)> has parameter of type <GiocoBorsa.Model.Borsa> in (ListinoImplementazionePostgresDAO.java:0)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.addSocietaDB(GiocoBorsa.Model.Societa, GiocoBorsa.Model.Borsa)> has parameter of type <GiocoBorsa.Model.Societa> in (ListinoImplementazionePostgresDAO.java:0)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)> calls constructor <GiocoBorsa.Model.Listino.<init>()> in (ListinoImplementazionePostgresDAO.java:31)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)> calls constructor <GiocoBorsa.Model.Societa.<init>(java.lang.String, float)> in (ListinoImplementazionePostgresDAO.java:37)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)> calls method <GiocoBorsa.Model.Borsa.getCitta()> in (ListinoImplementazionePostgresDAO.java:34)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)> calls method <GiocoBorsa.Model.Listino.addSocieta(GiocoBorsa.Model.Societa)> in (ListinoImplementazionePostgresDAO.java:38)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)> has parameter of type <GiocoBorsa.Model.Borsa> in (ListinoImplementazionePostgresDAO.java:0)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.ListinoImplementazionePostgresDAO.leggiListinoDB(GiocoBorsa.Model.Borsa)> has return type <GiocoBorsa.Model.Listino> in (ListinoImplementazionePostgresDAO.java:0)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.SocietaImplementazionePostgresDAO.updatePrezzo(GiocoBorsa.Model.Societa, float)> calls method <GiocoBorsa.Model.Societa.getNome()> in (SocietaImplementazionePostgresDAO.java:30)
+Method <GiocoBorsa.ImplementazioniPostgresDAO.SocietaImplementazionePostgresDAO.updatePrezzo(GiocoBorsa.Model.Societa, float)> has parameter of type <GiocoBorsa.Model.Societa> in (SocietaImplementazionePostgresDAO.java:0)
+	at com.tngtech.archunit.lang.ArchRule$Assertions.assertNoViolation(ArchRule.java:94)
+	at com.tngtech.archunit.lang.ArchRule$Assertions.check(ArchRule.java:82)
+	at com.tngtech.archunit.library.Architectures$LayeredArchitecture.check(Architectures.java:291)
+	at com.tngtech.archunit.junit.ArchRuleExecution.evaluateOn(ArchRuleExecution.java:43)
+	at com.tngtech.archunit.junit.ArchUnitRunner.runChild(ArchUnitRunner.java:154)
+	at com.tngtech.archunit.junit.ArchUnitRunner.runChild(ArchUnitRunner.java:63)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at com.tngtech.archunit.junit.ArchUnitRunner$1.evaluate(ArchUnitRunner.java:88)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></failure>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+</testsuite>

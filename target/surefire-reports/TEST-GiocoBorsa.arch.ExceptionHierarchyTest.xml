@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="GiocoBorsa.arch.ExceptionHierarchyTest" time="0.95" errors="0" skipped="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GiocoBorsa.arch.ExceptionHierarchyTest" time="0" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+1"/>
@@ -18,8 +18,7 @@
     <property name="java.runtime.version" value="17.0.1+1"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.io.tmpdir" value="/var/folders/2v/6t40zkvd7xz4kc8dq48m2wx80000gn/T/"/>
-    <property name="line.separator" value="
-"/>
+    <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.8.4/libexec/bin/m2.conf"/>
@@ -61,5 +60,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="GiocoBorsa.arch.ExceptionHierarchyTest" name="exceptions_should_not_inherit_from_a_generic_exception" time="0.95"/>
+  <testcase name="exceptions_should_not_inherit_from_a_generic_exception" classname="GiocoBorsa.arch.ExceptionHierarchyTest" time="0"/>
 </testsuite>
